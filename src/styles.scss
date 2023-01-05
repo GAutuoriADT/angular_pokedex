@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  background-color: #f7f7f7 !important;
+}
+
+.container {
+  padding-top: 60px;
+  margin-bottom: 200px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 50px;
+  padding-bottom: 15px;
+  margin-top: 40px;
+  position: relative;
+  transition: 200ms ease-in-out;
+
+  animation: fadeInLoad 1s 200ms forwards;
+  opacity: 0;
+
+  figure {
+    position: absolute;
+    top: -70px;
+
+    img {
+      height: 120px;
+    }
+  }
+}
+
+@keyframes fadeInLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pokenumber {
+  font-size: 0.8rem;
+  color: #a3a3a3;
+}
+
+.pokename {
+  font-size: 1.25rem;
+  font-weight: bold;
+  animation-name: underline;
+  animation-duration: 2s;
+  position: relative;
+}
+
+.pokename::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0);
+  transform-origin: 0 0;
+}
+
+.pokename:hover::after {
+  transform: scale(1);
+}
+
+.multiple-types {
+  display: flex;
+  gap: 5px;
+}
+
+.grass,
+.ground,
+.fire,
+.fighting {
+  display: flex;
+  width: 50px;
+  padding: 3px 0;
+  font-size: 0.7rem;
+  justify-content: center;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.grass {
+  background-color: #94fb68;
+  color: #5da33f;
+}
+
+.ground {
+  background-color: #ffca38;
+  color: #a68426;
+}
+
+.fire {
+  background-color: #f65238;
+  color: #804916;
+}
+
+.fighting {
+  background-color: #ff932f;
+  color: #804916;
+}
+
+.btn{
+    text-align: center;
+    height: 30px;
+}
+
+#searchbar{
+    margin-bottom: 50px;
+}
+
+.catched{
+  font-size: 12px;
+  font-weight:200;
+}
+
+.delete-icon{
+  align-self: flex-end;
+  z-index: 10;
+}
